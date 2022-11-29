@@ -16,6 +16,12 @@ public class PersonController {
     @Autowired
     PersonService service;
 
+
+    @GetMapping("/hello")
+    public String sayHello(){
+        return "Hello Voter";
+    }
+
     @GetMapping("/info")
     public List<PersonModel> getPersonData(){
         return service.getPersonInfo();
